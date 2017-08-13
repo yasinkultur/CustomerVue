@@ -1,0 +1,59 @@
+﻿.grid-row
+{
+    display: flex;
+    margin: 0 -10px;
+
+    &.vertical-center
+    {
+        align-items: center;
+    }
+
+    @media @medium
+    {
+        display: block;
+    }
+}
+
+.grid-col
+{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    margin: 0 10px;
+    min-width: 0;
+
+    &.right
+    {
+        text-align: right;
+    }
+
+    &.auto
+    {
+        flex-basis: auto;
+    }
+
+    &.fixed-150
+    {
+        flex: 0 0 150px;
+    }
+
+    &.percent-33
+    {
+        flex: 0 0 calc(33.3% - 20px);
+    }
+
+    &.percent-66
+    {
+        flex: 0 0 calc(66.6% - 20px);
+    }
+
+    &.order-1
+    {
+        order: 1;    
+    }
+
+    &.order-2
+    {
+        order: 2;
+    }
+}

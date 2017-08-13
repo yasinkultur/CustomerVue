@@ -1,0 +1,35 @@
+﻿.form
+{
+    > li
+    {
+        margin-top: 15px;
+
+        &:first-child
+        {
+            margin-top: 0;
+        }
+
+        > label
+        {
+            display: block;
+            margin-bottom: 3px;
+            color: fade(@text-color, 90%);
+            font-weight: 600;
+        }
+
+        > .radio-group
+        {
+            margin-top: 10px;
+
+            > label
+            {
+                margin-left: 10px;
+
+                &:first-child
+                {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}

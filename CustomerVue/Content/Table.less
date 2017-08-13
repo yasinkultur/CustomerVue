@@ -1,0 +1,252 @@
+﻿.list
+{
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;    
+    margin-bottom: 20px;    
+
+    > thead
+    {
+        > tr
+        {
+
+            > th
+            {
+                text-align: left;
+                font-weight: 600;
+                padding: 10px;
+                text-transform: capitalize;
+                vertical-align: bottom;
+                color: fade(@text-color, 90%);
+                border: 1px solid @border-color;
+                background-color: lighten(@border-color, 5%);
+
+                &.disappear-small
+                {
+                    @media @small
+                    {
+                        display: none;
+                    }
+                }
+
+                &.disappear-medium
+                {
+                    @media @medium
+                    {
+                        display: none;
+                    }
+                }
+            }
+        }        
+    }
+
+    > tbody
+    {
+        > tr
+        {
+            /*transition: .2s;*/
+
+            > td
+            {
+                padding: 10px;
+                border: 1px solid @border-color;
+                vertical-align: middle;                            
+
+                &.disappear-small
+                {
+                    @media @small
+                    {
+                        display: none;
+                    }
+                }
+
+                &.disappear-medium
+                {
+                    @media @medium
+                    {
+                        display: none;
+                    }
+                }
+
+                &.center
+                {
+                    text-align: center;
+                }
+
+                &.max-width-100
+                {
+                    max-width: 100px; 
+                    overflow: hidden; 
+                    white-space: nowrap; 
+                    text-overflow: ellipsis;
+                }
+
+                &.break-anywhere
+                {
+                    word-break: break-all;
+                }
+            }
+
+            &:nth-child(2n + 1)
+            {
+                background-color: darken(white, 2%);
+            }
+
+            &.green
+            {
+                background-color: tint(@green-color, 95%);
+            }
+
+            &.orange
+            {
+                background-color: tint(@orange-color, 95%);
+            }
+
+            &.linked
+            {
+                cursor: pointer;                
+
+                &:hover
+                {
+                    background-color: tint(@brand-color, 90%);                    
+                }                
+            }
+        }
+    }
+
+    &.single-column-at-medium
+    {        
+        @media @medium
+        {
+            margin-bottom: 0;
+
+            > thead
+            {
+                display: none;
+            }
+
+            > tbody
+            {                
+                > tr
+                {
+                    display: block;
+                    margin-bottom: 20px;
+                    background-color: white;
+                    border-bottom: 1px solid @border-color;
+
+                    > th
+                    {
+                        display: none;
+                    }
+
+                    > td:not(.disappear-medium)
+                    {                          
+                        display: block;
+                        border-bottom: none;  
+                        white-space: initial; 
+                        text-overflow: initial;  
+                        overflow: visible;
+                        text-align: right;
+                        width: 100%; 
+                        max-width: 100px;
+                        background-color: darken(white, 2%);
+                        max-width: 100%;                        
+                    } 
+
+                    > td:not(.disappear-medium)[data-column]
+                    {
+                        position: relative;
+                        padding-left: calc(30% + 30px);   
+                        text-align: left;
+                        background-color: white;
+
+                        &:before
+                        {
+                            top: 0;
+                            left: 0;
+                            height: calc(100% - 10px);
+                            padding: 10px 0 0 10px;
+                            position: absolute;
+                            content: attr(data-column) "\00a0";
+                            width: 30%;
+                            font-weight: 600;
+                            text-transform: capitalize;
+                            color: fade(@text-color, 90%);
+                            background-color: darken(white, 2%);
+                            border-right: 1px solid @border-color;
+                            white-space: nowrap; 
+                            text-overflow: ellipsis;  
+                            overflow: hidden;  
+                            
+                            
+                        }
+                    }    
+                    
+                    &.linked
+                    {
+                        &:hover
+                        {
+                            background-color: white; 
+                        }                
+                    }                       
+                }
+            }
+        }
+    }
+}
+
+.key-value
+{
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;           
+    margin-bottom: 20px;
+
+    > tbody
+    {
+        > tr
+        {
+            > th
+            {
+                padding: 10px;
+                border: 1px solid @border-color;
+                background-color: darken(white, 2%);
+                font-weight: 600;
+                text-transform: capitalize;
+                width: 35%;
+                color: fade(@text-color, 80%);
+                text-align: left; 
+                vertical-align: top;
+
+                @media @small
+                {
+                    width: auto;
+                }
+            }
+
+            > td
+            {
+                padding: 10px;
+                border: 1px solid @border-color;                
+                vertical-align: top;
+            }
+
+            &.large
+            {                
+                > th
+                {
+                    vertical-align: bottom;
+                }
+
+                > td
+                {
+                    font-size: 22px;
+                    line-height: 26px;
+                    vertical-align: middle;
+                    color: fade(@text-color, 90%);
+                }
+            }
+        }
+    }
+}
+

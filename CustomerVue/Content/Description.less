@@ -1,0 +1,25 @@
+﻿.timeline
+{
+    margin-bottom: 20px;
+
+    > dt
+    {
+        &:first-child
+        {
+            border-top: 0;
+            padding-top: 0;
+            margin-top: 0;
+        }
+
+        border-top: 1px solid @border-color;
+        padding: 10px 0 5px 0;
+        margin-top: 15px
+    }
+
+    > dd
+    {
+        color: fade(@text-color, 70%);
+        font-size: 12px;
+        font-weight: 400;
+    }
+}

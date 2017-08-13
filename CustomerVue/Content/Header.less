@@ -1,0 +1,114 @@
+﻿header
+{    
+    color: white;
+    background-color: @header-color;
+
+    > .header-inner
+    {
+        max-width: @body-max-width;
+        padding: 0 20px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;        
+
+        > .header-left
+        {
+            flex: 1 1 33.3%;
+            padding: 15px 0;
+
+            > .logo
+            {
+                background: url('../Images/logo.png') no-repeat;
+                background-size: 117px 20px;
+                width: 117px;
+                height: 20px;
+                display: block;
+
+                @media @high-dpi
+                {
+                    background: url('../Images/logo@2x.png') no-repeat;
+                    background-size: 117px 20px;                    
+                }
+            }                
+        }
+
+        > .header-center
+        {
+            @media @small
+            {
+                text-align: right;
+            }
+
+            flex: 1 1 33.3%;
+            font-size: 20px;
+            line-height: 1;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        > .header-right
+        {
+            @media @small
+            {
+                display: none;
+            }
+
+            flex: 1 1 33.3%;
+            text-align: right;
+        }
+    }
+}
+
+.subheader
+{
+    background-color: white;    
+    margin-bottom: 20px;
+    box-shadow: 0 5px 10px fade(#AAA, 10%);    
+
+    > .subheader-inner
+    {
+        margin: 0 auto;
+        padding: 0 20px;
+        max-width: @body-max-width;
+        display: flex;
+        align-items: center;
+
+        @media @small
+        {
+            display: block;
+        }
+
+        > .subheader-left
+        {
+            flex: 1 1 auto;
+            font-size: 24px;
+            font-weight: 300;
+            padding: 15px 0;
+
+            > .breadcrumbs
+            {
+                font-size: 13px;
+                font-weight: 400;
+                margin-left: 3px;
+            }
+        }
+
+        > .subheader-right
+        {
+            flex: 1 1 0;
+            text-align: right;
+            color: fade(@text-color, 80%);
+
+            @media @small
+            {
+                padding: 0 0 20px 0;
+
+                > .label
+                {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

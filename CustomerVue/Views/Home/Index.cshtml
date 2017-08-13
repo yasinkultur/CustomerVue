@@ -1,0 +1,15 @@
+﻿@using CustomerVue.Code
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div id="mount-point"></div>
+@Scripts.Render("~/bundles/scripts")
+@Scripts.Render("~/bundles/vuejs")
+@Html.VueRender("~/bundles/vue/components")
+@Html.VueRender("~/bundles/vue/apps")
+<script type="text/javascript">
+    VueApps.Site.userGreetingName = 'Yasin';
+    VueApps.Site.siteVersion = '1.0.0';
+    VueApps.Site.$mount('#mount-point');
+</script>

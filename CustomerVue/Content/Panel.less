@@ -1,0 +1,31 @@
+﻿.panel
+{
+    background-color: white;
+    box-shadow: 0 5px 10px fade(#AAA, 10%);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 20px 20px 0 20px;
+    overflow: hidden;
+
+    @media @small
+    {
+        overflow: auto;
+    }
+
+    > .panel-heading
+    {
+        margin-bottom: 15px; 
+        font-weight: 600; 
+        font-size: 16px; 
+        color: darken(@fawn-color, 10%);
+        line-height: 1;
+    }
+
+    > .panel-unit
+    {
+        &.with-margin
+        {
+            margin-bottom: 20px;
+        }
+    }
+}

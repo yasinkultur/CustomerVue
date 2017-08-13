@@ -1,0 +1,93 @@
+﻿.filter
+{
+    display: block;    
+    font-size: 0;    
+
+    > li
+    {
+        display: inline-block;
+        padding: 10px 15px 7px 15px;
+        cursor: pointer;
+        font-size: 14px;
+        border-bottom: 1px solid @border-color;
+        margin-bottom: 2px;
+        transition: .2s;
+
+        &.selected, 
+        &:hover
+        {
+            border-bottom: 5px solid @brand-color;
+            padding-bottom: 5px;
+            margin-bottom: 0;
+
+            &.fawn
+            {
+                border-bottom-color: @fawn-color;
+            }
+
+            &.orange
+            {
+                border-bottom-color: @orange-color;
+            }
+
+            &.green
+            {
+                border-bottom-color: @green-color;
+            }
+
+            @media @small
+            {
+                background-color: @brand-color;        
+                border-bottom: 1px solid @border-color;
+                margin-bottom: 0;
+                padding-bottom: 7px;
+                color: white;
+
+                &.fawn
+                {
+                    background-color: @fawn-color;                    
+                }
+
+                &.orange
+                {
+                    background-color: @orange-color;
+                }
+
+                &.green
+                {
+                    background-color: @green-color;
+                }
+            }
+        }
+
+
+        @media @small
+        {
+            flex: 0 0 50%;  
+            margin-bottom: 0;
+            padding-bottom: 7px;         
+        }
+    }
+
+    > li:nth-child(2n + 1)
+    {
+        @media @small
+        {
+            border-right: 1px solid @border-color;
+        }
+    }
+
+    @media @medium
+    {
+        margin-top: 5px;
+    } 
+
+    @media @small
+    {
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        border: 1px solid @border-color;
+        border-bottom: none;
+    }
+}

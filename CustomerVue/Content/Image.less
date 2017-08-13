@@ -1,0 +1,53 @@
+﻿@thumbnail-height-normal: 75px;
+@thumbnail-width-normal: 53px;
+
+@thumbnail-height-small: 50px;
+@thumbnail-width-small: 36px;
+
+.document-thumbnails
+{
+    position: relative;
+    height: @thumbnail-height-normal;
+    width: @thumbnail-width-normal;
+    margin: 0 auto;    
+    
+    @media @small   
+    {
+        height: @thumbnail-height-small;
+        width: @thumbnail-width-small;
+    }
+
+    > img
+    {
+        background-color: white;
+        border: 1px solid @border-color;
+        height: @thumbnail-height-normal;
+        top: 0;
+        left: 0;
+        position: absolute;
+        box-shadow: 0 5px 10px fade(#AAA, 10%);
+
+        @media @small 
+        {
+            height: @thumbnail-height-small;
+        }
+
+        &:nth-child(1)
+        {
+            z-index: 3;   
+            transform: rotateZ(0deg);         
+        }
+
+        &:nth-child(2)
+        {
+            z-index: 2;
+            transform: rotateZ(15deg);
+        }
+
+        &:nth-child(3)
+        {
+            z-index: 1;
+            transform: rotateZ(-15deg);
+        }
+    }
+}

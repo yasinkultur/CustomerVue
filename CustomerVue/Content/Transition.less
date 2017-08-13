@@ -1,0 +1,42 @@
+﻿/* Highlight */
+.highlight-enter-active
+{    
+    transition: background-color 4s ease-out;
+}
+
+.highlight-leave-active
+{
+    display: none;
+}
+
+.highlight-enter
+{
+    background-color: @fawn-color !important;
+}
+
+/* Flip X */
+.flip-x-enter-active 
+{
+    transition: all .25s ease-out;
+}
+
+.flip-x-leave-active
+{
+    transition: all .25s ease-in;
+}
+
+.flip-x-enter
+{
+    transform: rotateX(-90deg);
+}
+
+.flip-x-leave-to  
+{
+    transform: rotateX(90deg);
+}
+
+.none-enter-active,
+.none-leave-active
+{
+    transition: all 0s !important;
+}

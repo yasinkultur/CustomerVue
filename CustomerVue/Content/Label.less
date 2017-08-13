@@ -1,0 +1,46 @@
+﻿.label
+{
+    padding: 4px 10px;
+    margin: -4px 0;
+    border-radius: 50px;
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: white;
+    background-color: desaturate(@brand-color, 100%);
+    perspective: 2000px;
+    
+    &.green
+    {
+        background-color: @green-color;
+    }  
+    
+    &.orange
+    {
+        background-color: @orange-color;
+    }       
+
+    &.red
+    {
+        background-color: @red-color;
+    }    
+
+    &.fawn
+    {
+        background-color: @fawn-color;
+    }
+
+    &.large
+    {
+        font-size: 16px;
+        padding: 6px 14px;
+        margin: -6px 0;
+    }
+
+    &.help
+    {
+        cursor: help;
+    }
+}

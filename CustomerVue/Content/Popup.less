@@ -1,0 +1,88 @@
+﻿.popup
+{
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .66);
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+
+    > .popup-content-container
+    {
+        width: calc(100% - 40px);
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, .5) 0 0 30px;
+        border-radius: 10px 10px 5px 5px;
+        padding: 0;
+        position: relative;   
+        z-index: 110;             
+
+        > .popup-title
+        {
+            font-weight: 300; 
+            font-size: 17px; 
+            color: white;
+            background-color: @header-color;
+            padding: 15px;
+            line-height: 1;
+            text-align: center;
+            border-radius: 5px 5px 0 0;
+        }
+
+        > .popup-content
+        {
+            margin: 20px;
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;            
+
+            > iframe
+            {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        > .popup-footer
+        {
+            padding: 0 20px 20px 20px;
+            text-align: center;
+        }
+
+        > .popup-working
+        {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: 47px;
+            left: 0;
+            width: 100%;
+            height: calc(100% - 47px);
+            background-color: rgba(0, 0, 0, .66);
+            border-radius: 0 0 4px 4px;
+            color: white;
+            font-size: 105px;
+            z-index: 120;
+
+            > .spinner
+            {
+                border: 5px solid white;
+                border-top-color: rgba(0,0,0,0);
+                border-left-color: rgba(0,0,0,0);
+                border-radius: 100px;
+                width: 75px;
+                height: 75px;
+                animation: spin .7s infinite linear;    
+            }
+
+            > .success
+            {
+                animation: success-appear 0.5s ease-out both;
+            }
+        }
+    }
+}
